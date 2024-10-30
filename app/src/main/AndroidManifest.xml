@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.moncefadj.medcare">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.SET_ALARM"/>
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:theme="@style/Theme.MedCare">
+        <activity android:name=".Patient.Pneumologie"/>
+
+        <activity android:name=".Patient.cardiologie" />
+        <activity android:name=".Patient.Ophtalmologie" />
+        <activity android:name=".Doctor.EditDoctorProfile" />
+        <activity android:name=".Doctor.DoctorDashboard" />
+        <activity android:name=".Patient.PatientHome">
+
+    </activity>
+        <activity android:name=".Patient.OneSpecialtyDoctors" />
+        <activity android:name=".Underbar.underbar" />
+        <activity android:name=".PatientSearch.Search" />
+
+        <activity android:name=".Medicaments.ajouterMed" />
+        <activity android:name=".Medicaments.ajouterMesure" />
+        <activity android:name=".Medicaments.liste_medicaments" />
+        <activity android:name=".Doctor.DoctorProfile" />
+        <activity android:name=".ProfilePatient.PatientProfile" />
+        <activity android:name=".ProfilePatient.EditPatientProfile" />
+        <activity
+            android:name=".Doctor.DoctorSignUp"
+            android:windowSoftInputMode="stateVisible|adjustPan" />
+        <activity
+            android:name=".Patient.PatientSignUp"
+            android:windowSoftInputMode="stateVisible|adjustPan" />
+        <activity
+            android:name=".Common.LoginActivity"
+            android:windowSoftInputMode="stateVisible|adjustPan" />
+        <activity android:name=".Common.OnBoardingScreen" />
+
+        <activity
+            android:name=".Patient.DoctorProfileFromPatientHome"
+            android:windowSoftInputMode="stateVisible|adjustPan" />
+
+        <activity android:name=".Medicaments.liste_mesure"/>
+
+        <activity android:name=".Common.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <receiver android:name=".Medicaments.AlertReceiver"/>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
